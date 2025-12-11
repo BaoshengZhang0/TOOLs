@@ -1,0 +1,49 @@
+# 常规参数
+Common:
+  ImgColorPath: ../data/inputs/raw.png
+  ImgDepthPath: ../data/inputs/depth.png
+  PcdPath: ../data/inputs/points.pcd
+  OutPath: ../data/outputs/
+# Point Feature Extraction
+PCF_detection:
+  downSamplingScale: 0.01
+  searchNormal: 0.05
+  segAngle: 3.0
+  blankRate: 0.3
+# Image Feature Extraction
+IMF_detection:
+  lengthThr: 30
+  distanceThr: 1.5
+  cannyThr1: 50
+  cannyThr2: 150
+  depthGradientThr: 50.0
+# Visibility Analysis
+Visible_analysis:
+  searchK: 30
+  sigma: 0.01
+  visThr: 0.6
+# Optimization Parameters
+Optimization:
+  matchingPara: 10.0
+# 相机内参
+Camera_internal_parameter:
+  fx : 1770.4475750660245
+  fy : 1770.677782465028
+  cx : 1229.5212871906383
+  cy : 498.7334965074086
+  s : 0.0
+# 相机畸变参数
+Distortion_parameter:
+  enable : false
+  k1 : -0.12788674165949968
+  k2 : 0.12602103745132423
+  k3 : -0.0002409476605466123
+  p1 : 0.0012958487612697639
+  p2 : 0.000000
+# 初始坐标变换
+Initial_R:
+  - [ 0, -1, 0 ]
+  - [ 0, 0, -1 ]
+  - [ 1, 0, 0 ]
+Initial_t:
+  - [0.0, 0.0, 0.051]
